@@ -44,11 +44,11 @@ body {
   
   .sidebar .nav-link .feather {
     margin-left: 4px;
-    color: #ff2020;
+    color: #727272;
   }
   
   .sidebar .nav-link.active {
-    color: #006aff;
+    color: #2470dc;
   }
   
   .sidebar .nav-link:hover .feather,
