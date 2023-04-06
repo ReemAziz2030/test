@@ -33,6 +33,11 @@
       .nav-link {
         color:aliceblue;
       }
+      .nav-link:hover {
+        
+        background-color:rgb(47, 105, 96);
+        color: rgb(255, 255, 255);
+      }
       
       
     </style>
@@ -44,10 +49,10 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <img src="./bootstrap/site/static/docs/5.2/assets/img/logo1.png" alt="LOGO" width="150" height="50"   style="margin-right: 15px;"  >
+  <img src="./bootstrap/site/static/docs/5.2/assets/img/logo1.png" alt="LOGO" width="120" height="50"   style="margin-right: 15px;"  >
   
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="عرض/إخفاء لوحة التنقل">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"></span>
   </button>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
@@ -62,7 +67,7 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link " aria-current="page" href="#">
               <span data-feather="home"></span>
               لوحة القيادة
             </a>
@@ -75,145 +80,146 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              الأعضاء
+            <a class="nav-link" data-bs-toggle="collapse" href="#collapseProjects" aria-expanded="false" aria-controls="collapseProjects">
+              <i class="bi bi-folder2-open"></i>  المشاريع<i class="bi-caret-down float-sm-end"></i>
             </a>
           </li>
+          <ul class="collapse" id="collapseProjects">
+            <li class="nav-item">
+              <i class="bi bi-people-fill"></i>
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                <i class="bi bi-check-circle"></i>    المشاريع المكتملة
+              </a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                <i class="bi bi-list"></i>  المشاريع قيد التنفيذ
+              </a>
+            
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers"></span>
+                <i class="bi bi-x-circle"></i>  المشاريع المتوقفة
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers"></span>
+                <i class="bi bi-folder-symlink"></i>  جميع المشاريع 
+              </a>
+            </li>
+          </ul>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#collapseMember" aria-expanded="false" aria-controls="collapseProjects">
+            <i class="bi bi-person-fill"></i> الأعضاء <i class="bi-caret-down float-sm-end"></i>
+          </a>
+        </li>
+        <ul class="collapse" id="collapseMember">
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              التقارير
+              <i class="bi bi-person-plus-fill"></i>   اضافة عضو جديد
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              التكاملات
-            </a>
-          </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                <i class="bi bi-people-fill"></i>   جميع الأعضاء
+              </a>
+              </li>
         </ul>
+      </ul>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>التقارير المحفوظة</span>
-          <a class="link-secondary" href="#" aria-label="إضافة تقرير جديد">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              الشهر الحالي
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              الربع الأخير
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              التفاعل الإجتماعي
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              مبيعات نهاية العام
-            </a>
-          </li>
-        </ul>
       </div>
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2"> المشاريع المغلقة</h1>
-        
-      </div>
-
-
-    
-      <div class="table-responsive">
-        <table id="example" class="table table-striped" style="width:100%">
-            <thead>
-                <tr class="center">
-                  <th scope="col">#</th>
-                  <th scope="col">الأسم</th>
-                  <th scope="col">اسم المشروع</th>
-                  <th scope="col">القسم</th>
-                  <th scope="col">تاريخ الإنشاء</th>
-                  <th scope="col">تاريخ الإنتهاء</th>
-                  <th scope="col">المبرمج</th>
-                  <th scope="col"> المبرمج المساند</th>
-                  <th scope="col"> حالة المشروع</th>
-                  <th scope="col"> تفاصيل</th>
-
-                </tr>
-              </thead>
-            
-            
-              <tbody class="center">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>لمى الحربي </td>
-                    <td>المشروع الثالث</td>
-                    <td>قسم التقنية</td>
-                    <td>10-9-2022 </td>
-                    <td>5-10-2022</td>
-                    <td> ريم</td>
-                    <td> نورة</td>
-                    <td><span class="badge text-bg-danger">مغلق</span></td>
-                    <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
-                    
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2"> المشاريع المغلقة</h1>
+          
+        </div>
+  
+  
+      
+        <div class="table-responsive">
+          <table id="example" class="table table-striped" style="width:100%">
+              <thead>
+                  <tr class="center">
+                    <th scope="col">#</th>
+                    <th scope="col">الأسم</th>
+                    <th scope="col">اسم المشروع</th>
+                    <th scope="col">القسم</th>
+                    <th scope="col">تاريخ الإنشاء</th>
+                    <th scope="col">تاريخ الإنتهاء</th>
+                    <th scope="col">المبرمج</th>
+                    <th scope="col"> المبرمج المساند</th>
+                    <th scope="col"> حالة المشروع</th>
+                    <th scope="col"> تفاصيل</th>
+  
                   </tr>
-                 
-                   <tr>
-                    <th scope="row">2</th>
-                    <td>راشد</td>
-                    <td>المشروع الخامس</td>
-                    <td>قسم التقنية</td>
-                    <td>10-9-2022 </td>
-                    <td>5-10-2022</td>
-                    <td> ريم</td>
-                    <td> نورة</td>
-                    <td><span class="badge text-bg-danger">مغلق</span></td>
-                    <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
-                    
+                </thead>
+              
+              
+                <tbody class="center">
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>لمى الحربي </td>
+                      <td>المشروع الثالث</td>
+                      <td>قسم التقنية</td>
+                      <td>10-9-2022 </td>
+                      <td>5-10-2022</td>
+                      <td> ريم</td>
+                      <td> نورة</td>
+                      <td><span class="badge text-bg-danger">مغلق</span></td>
+                      <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
+                      
+                    </tr>
+                   
+                     <tr>
+                      <th scope="row">2</th>
+                      <td>راشد</td>
+                      <td>المشروع الخامس</td>
+                      <td>قسم التقنية</td>
+                      <td>10-9-2022 </td>
+                      <td>5-10-2022</td>
+                      <td> ريم</td>
+                      <td> نورة</td>
+                      <td><span class="badge text-bg-danger">مغلق</span></td>
+                      <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
+                      
+                    </tr>
+                      <tr>
+                      <th scope="row">3</th>
+                      <td>عبدالعزيز</td>
+                      <td>المشروع السادس</td>
+                      <td>قسم التقنية</td>
+                      <td>10-9-2022 </td>
+                      <td>5-10-2022</td>
+                      <td> ريم</td>
+                      <td> نورة</td>
+                      <td><span class="badge text-bg-danger">مغلق</span></td>
+                      <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
                   </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>عبدالعزيز</td>
-                    <td>المشروع السادس</td>
-                    <td>قسم التقنية</td>
-                    <td>10-9-2022 </td>
-                    <td>5-10-2022</td>
-                    <td> ريم</td>
-                    <td> نورة</td>
-                    <td><span class="badge text-bg-danger">مغلق</span></td>
-                    <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
-                </tr>
-
-                 
-                    <tr>
-                    <th scope="row">4</th>
-                    <td>سلمان</td>
-                    <td>المشروع العاشر</td>
-                    <td>قسم التقنية</td>
-                    <td>10-9-2022 </td>
-                    <td>5-10-2022</td>
-                    <td> ريم</td>
-                    <td> لمى</td>
-                    <td><span class="badge text-bg-danger">مغلق</span></td>
-                    <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
-                </tr>
-                </tbody>
-              </table>
-
-
+  
+                   
+                      <tr>
+                      <th scope="row">4</th>
+                      <td>سلمان</td>
+                      <td>المشروع العاشر</td>
+                      <td>قسم التقنية</td>
+                      <td>10-9-2022 </td>
+                      <td>5-10-2022</td>
+                      <td> ريم</td>
+                      <td> لمى</td>
+                      <td><span class="badge text-bg-danger">مغلق</span></td>
+                      <td><a href="#" type="button"class="btn btn-light">عرض</a></td>
+                  </tr>
+                  </tbody>
+                </table>
     <!-- link js for dataTable -->
     <script src=" https://code.jquery.com/jquery-3.5.1.js"></script> 
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
