@@ -31,6 +31,12 @@
       .nav-link {
         color:aliceblue;
       }
+
+      .nav-link:hover {
+        
+        background-color:aliceblue;
+        color: gray;
+      }
       
       
     </style>
@@ -41,7 +47,7 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <img src="./bootstrap/site/static/docs/5.2/assets/img/logo1.png" alt="LOGO" width="130" height="50#"   style="margin-right: 15px;"  >
+  <img src="./bootstrap/site/static/docs/5.2/assets/img/logo1.png" alt="LOGO" width="120" height="50"   style="margin-right: 15px;"  >
   
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="عرض/إخفاء لوحة التنقل">
     <span class="navbar-toggler-icon"></span>
@@ -70,50 +76,58 @@
               الطلبات
             </a>
           </li>
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>المشاريع </span>
-          </h6>
-          
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#collapseProjects" aria-expanded="false" aria-controls="collapseProjects">
+              <i class="bi bi-people-fill"></i> المشاريع
+            </a>
+          </li>
+          <ul class="collapse" id="collapseProjects">
+            <li class="nav-item">
+              <i class="bi bi-people-fill"></i>
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                المشاريع المكتملة
+              </a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                المشاريع قيد التنفيذ
+              </a>
+            
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers"></span>
+                المشاريع المتوقفة
+              </a>
+            </li>
+          </ul>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#collapseMember" aria-expanded="false" aria-controls="collapseProjects">
+            <i class="bi bi-people-fill"></i> الأعضاء
+          </a>
+        </li>
+        <ul class="collapse" id="collapseMember">
           <li class="nav-item">
             <i class="bi bi-people-fill"></i>
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
-              المشاريع المكتملة
+              جميع الأعضاء 
             </a>
+            
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              المشاريع قيد التنفيذ
+               اضافة عضو جديد  
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              المشاريع المتوقفة
-            </a>
+          
           </li>
         </ul>
+      </ul>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>الأعضاء </span>
-          
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              جميع الاعضاء 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">
-              <span data-feather="file-text"></span>
-              اضافة عضو جديد 
-            </a>
-          </li>
-          
-        </ul>
       </div>
     </nav>
 
