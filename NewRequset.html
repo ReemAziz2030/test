@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title> الرئيسية</title>
+    <title> اضافة طلب جديد</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
     <!-- Option 1: Include in HTML -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -15,7 +15,7 @@
 
 
     <style>
-      .bd-placeholder-img {
+         .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -37,6 +37,24 @@
         background-color:rgb(16, 79, 87);
         color: gray;
       }
+     button[type="submit"]{
+     width: 10%;
+     margin-top: 10px;
+     padding: 10px;
+     border: none;
+     border-radius: 30px;
+     background: #08645c;
+     color: #fff;
+     font-size: 15px;
+     font-weight: bold;
+     float: left;
+
+     }
+     button[type="submit"]:hover{
+     cursor: pointer;
+     background:#08645c;
+     color: #fff;
+     }
       
       
     </style>
@@ -84,7 +102,7 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="ClientRequset.html">
+                  <a class="nav-link" href="NewRequset.html">
                     <i class="bi bi-file-earmark-text"></i> جميع الطلبات 
                   </a>
                   </li>
@@ -94,18 +112,50 @@
 
       </div>
     </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2"> اضافة طلب جديد  </h1>
+          
+        </div>
 
-    
-        
-      </div>
-
-
-  
+        <form>
+            <div class="mb-3">
+              <label for="FirstName" class="form-label">الاسم الاول </label>
+              <input type="text" class="form-control" id="FirstName"required >
+            </div>
+            <div class="mb-3">
+              <label for="LastName" class="form-label" >الاسم الاخير</label>
+              <input type="text" class="form-control" id="LastName"required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label" > رقم الجوال</label>
+                <input type="text" class="form-control" id="phone" required>
+              </div>
+              <div class="mb-3">
+                <label for="Projectame" class="form-label" >اسم المشروع</label>
+                <input type="text" class="form-control" id="Projectame"required>
+              </div>
+              <div class="mb-3">
+                <label for="Department" class="form-label" >القسم </label>
+                <select name="selection" id ="Department" class="form-control" required>
+                <option value="select">اختار القسم</option>
+                     <option value="firstDep">قسم التقنيه</option>
+                     <option value="SecDep">قسم ال</option>
+                     <option value="ThirdDep">قسم ال</option>
+                     <option value="FourthDep">قسم ال</option>
+              </select>
+              </div>
+              <div class="mb-3">
+                <label for="Descarption" class="form-label">وصف المشروع </label>
+                <textarea id="Descarption" class="form-control" required> اكتب هنا</textarea>
+              </div>
+            <button type="submit" class="btn ">ارسال</button>
+          </form>
 
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</html>
+
 
   </body>
 </html>

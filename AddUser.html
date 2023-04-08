@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title> الرئيسية</title>
+    <title>اضافةعضو جديد</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
     <!-- Option 1: Include in HTML -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -34,10 +34,27 @@
 
       .nav-link:hover {
         
-        background-color:aliceblue;
+        background-color:rgb(16, 79, 87);
         color: gray;
       }
-      
+      button[type="submit"]{
+     width: 10%;
+     margin-top: 10px;
+     padding: 10px;
+     border: none;
+     border-radius: 30px;
+     background: #08645c;
+     color: #fff;
+     font-size: 15px;
+     font-weight: bold;
+     float: left;
+
+     }
+     button[type="submit"]:hover{
+     cursor: pointer;
+     background:#08645c;
+     color: #fff;
+     }
       
     </style>
     
@@ -71,42 +88,66 @@
               لوحة القيادة
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span>
+              <i class="bi bi-file-earmark"></i>
+              الطلبات
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#collapseProjects" aria-expanded="false" aria-controls="collapseProjects">
-              <i class="bi bi-folder2-open"></i>  المشاريع  <i class=" bi-caret-down float-sm-end"></i>
+              <i class="bi bi-folder2-open"></i>  المشاريع <i class=" bi-caret-down float-sm-end"></i>
             </a>
           </li>
           <ul class="collapse" id="collapseProjects">
             <li class="nav-item">
               <i class="bi bi-people-fill"></i>
-              <a class="nav-link" href="dev_complet.html">
+              <a class="nav-link" href="complet_project.html">
                 <span data-feather="users"></span>
                 <i class="bi bi-check-circle"></i>    المشاريع المكتملة
               </a>
               
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dev_underway.html">
+              <a class="nav-link" href="underway_project.html">
                 <span data-feather="bar-chart-2"></span>
                 <i class="bi bi-list"></i>  المشاريع قيد التنفيذ
               </a>
             
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dev_closed.html">
+              <a class="nav-link" href="closed_Projects.html">
                 <span data-feather="layers"></span>
                 <i class="bi bi-x-circle"></i>  المشاريع المتوقفة
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dev_projects.html">
+              <a class="nav-link" href="projects.html">
                 <span data-feather="layers"></span>
                 <i class="bi bi-folder-symlink"></i>  جميع المشاريع 
               </a>
             </li>
           </ul>
-        
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#collapseMember" aria-expanded="false" aria-controls="collapseProjects">
+            <i class="bi bi-person-fill"></i> الأعضاء <i class=" bi-caret-down float-sm-end"></i>
+          </a>
+        </li>
+        <ul class="collapse" id="collapseMember">
+          <li class="nav-item">
+            <a class="nav-link" href="AddUser.html">
+              <span data-feather="bar-chart-2"></span>
+              <i class="bi bi-person-plus-fill"></i>   اضافة عضو جديد
+            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="All_Users.html">
+                <span data-feather="bar-chart-2"></span>
+                <i class="bi bi-people-fill"></i>   جميع الأعضاء
+              </a>
+              </li>
+        </ul>
       </ul>
 
       </div>
@@ -114,12 +155,34 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">لوحة القيادة</h1>
-        
+        <h1 class="h2">اضافةعضو جديد </h1>
       </div>
 
 
-  
+      <form>
+        <div class="mb-3">
+          <label for="Name" class="form-label">الاسم  </label>
+          <input type="text" class="form-control" id="Name"required >
+        </div>
+        <div class="mb-3">
+          <label for="Department" class="form-label" >القسم </label>
+          <input type="text" class="form-control" id="Department"required>
+        </div>
+        <div class="mb-3">
+            <label for="Jobtitlt" class="form-label" > المسمى الوظيفي </label>
+            <input type="text" class="form-control" id="Jobtitlt" required>
+          </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label" > رقم الجوال</label>
+            <input type="text" class="form-control" id="phone" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" > البريد الالكتروني </label>
+            <input type="text" class="form-control" id="email" required>
+          </div>
+          
+        <button type="submit" class="btn ">اضافة</button>
+      </form>
 
 
 
